@@ -634,36 +634,36 @@ var HomePage = /** @class */ (function () {
         }
         if (m) {
             if (dvaSwitch) {
-                tanks.push({ name: "D.Va", IMG: '/assets/imgs/tall/dva.png', score: this.dva });
+                tanks.push({ name: "D.Va", IMG: 'assets/imgs/tall/dva.png', score: this.dva });
             }
             if (hammondSwitch) {
-                tanks.push({ name: "Hammond", IMG: '/assets/imgs/tall/hammond.png', score: this.hammond });
+                tanks.push({ name: "Hammond", IMG: 'assets/imgs/tall/hammond.png', score: this.hammond });
             }
             if (winstonSwitch) {
-                tanks.push({ name: "Winston", IMG: '/assets/imgs/tall/winston.png', score: this.winston });
+                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston });
             }
             if (orisaSwitch) {
-                tanks.push({ name: "Orisa", IMG: '/assets/imgs/tall/orisa.png', score: this.orisa });
+                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa });
             }
             if (zaryaSwitch) {
-                tanks.push({ name: "Zarya", IMG: '/assets/imgs/tall/zarya.png', score: this.zarya });
+                tanks.push({ name: "Zarya", IMG: 'assets/imgs/tall/zarya.png', score: this.zarya });
             }
             if (reinhardtSwitch) {
-                tanks.push({ name: "Reinhardt", IMG: '/assets/imgs/tall/reinhardt.png', score: this.reinhardt });
+                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt });
             }
             if (roadhogSwitch) {
-                tanks.push({ name: "Roadhog", IMG: '/assets/imgs/tall/roadhog.png', score: this.roadhog });
+                tanks.push({ name: "Roadhog", IMG: 'assets/imgs/tall/roadhog.png', score: this.roadhog });
             }
         }
         else if (!m) {
             if (winstonSwitch) {
-                tanks.push({ name: "Winston", IMG: '/assets/imgs/tall/winston.png', score: this.winston });
+                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston });
             }
             if (orisaSwitch) {
-                tanks.push({ name: "Orisa", IMG: '/assets/imgs/tall/orisa.png', score: this.orisa });
+                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa });
             }
             if (reinhardtSwitch) {
-                tanks.push({ name: "Reinhardt", IMG: '/assets/imgs/tall/reinhardt.png', score: this.reinhardt });
+                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt });
             }
         }
         tanks.sort(function (a, b) { return b.score - a.score; });
@@ -701,33 +701,33 @@ var HomePage = /** @class */ (function () {
         }
         if (m) {
             if (anaSwitch) {
-                supports.push({ name: "Ana", IMG: '/assets/imgs/tall/ana.png', score: this.ana });
+                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana });
             }
             if (brigitteSwitch) {
-                supports.push({ name: "Brigitte", IMG: '/assets/imgs/tall/brigitte.png', score: this.brigitte });
+                supports.push({ name: "Brigitte", IMG: 'assets/imgs/tall/brigitte.png', score: this.brigitte });
             }
             if (lucioSwitch) {
-                supports.push({ name: "Lucio", IMG: '/assets/imgs/tall/lucio.png', score: this.lucio });
+                supports.push({ name: "Lucio", IMG: 'assets/imgs/tall/lucio.png', score: this.lucio });
             }
             if (mercySwitch) {
-                supports.push({ name: "Mercy", IMG: '/assets/imgs/tall/mercy.png', score: this.mercy });
+                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy });
             }
             if (moiraSwitch) {
-                supports.push({ name: "Moira", IMG: '/assets/imgs/tall/moira.png', score: this.moira });
+                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira });
             }
             if (zenyattaSwitch) {
-                supports.push({ name: "Zenyatta", IMG: '/assets/imgs/tall/zenyatta.png', score: this.zenyatta });
+                supports.push({ name: "Zenyatta", IMG: 'assets/imgs/tall/zenyatta.png', score: this.zenyatta });
             }
         }
         else if (!m) {
             if (anaSwitch) {
-                supports.push({ name: "Ana", IMG: '/assets/imgs/tall/ana.png', score: this.ana });
+                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana });
             }
             if (mercySwitch) {
-                supports.push({ name: "Mercy", IMG: '/assets/imgs/tall/mercy.png', score: this.mercy });
+                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy });
             }
             if (moiraSwitch) {
-                supports.push({ name: "Moira", IMG: '/assets/imgs/tall/moira.png', score: this.moira });
+                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira });
             }
         }
         supports.sort(function (a, b) { return b.score - a.score; });
@@ -800,56 +800,56 @@ var HomePage = /** @class */ (function () {
             }
         }
         if (bastionSwitch) {
-            dpses.push({ name: "Bastion", IMG: '/assets/imgs/tall/bastion.png', score: this.bastion });
+            dpses.push({ name: "Bastion", IMG: 'assets/imgs/tall/bastion.png', score: this.bastion });
         }
         if (doomfistSwitch) {
-            dpses.push({ name: "Doomfist", IMG: '/assets/imgs/tall/doomfist.png', score: this.doomfist });
+            dpses.push({ name: "Doomfist", IMG: 'assets/imgs/tall/doomfist.png', score: this.doomfist });
         }
         if (genjiSwitch) {
-            dpses.push({ name: "Genji", IMG: '/assets/imgs/tall/genji.png', score: this.genji });
+            dpses.push({ name: "Genji", IMG: 'assets/imgs/tall/genji.png', score: this.genji });
         }
         if (hanzoSwitch) {
-            dpses.push({ name: "Hanzo", IMG: '/assets/imgs/tall/hanzo.png', score: this.hanzo });
+            dpses.push({ name: "Hanzo", IMG: 'assets/imgs/tall/hanzo.png', score: this.hanzo });
         }
         if (junkratSwitch) {
-            dpses.push({ name: "Junkrat", IMG: '/assets/imgs/tall/junkrat.png', score: this.junkrat });
+            dpses.push({ name: "Junkrat", IMG: 'assets/imgs/tall/junkrat.png', score: this.junkrat });
         }
         if (mccreeSwitch) {
-            dpses.push({ name: "McCree", IMG: '/assets/imgs/tall/mccree.png', score: this.mccree });
+            dpses.push({ name: "McCree", IMG: 'assets/imgs/tall/mccree.png', score: this.mccree });
         }
         if (meiSwitch) {
-            dpses.push({ name: "Mei", IMG: '/assets/imgs/tall/mei.png', score: this.mei });
+            dpses.push({ name: "Mei", IMG: 'assets/imgs/tall/mei.png', score: this.mei });
         }
         if (pharahSwitch) {
-            dpses.push({ name: "Pharah", IMG: '/assets/imgs/tall/pharah.png', score: this.pharah });
+            dpses.push({ name: "Pharah", IMG: 'assets/imgs/tall/pharah.png', score: this.pharah });
         }
         if (reaperSwitch) {
-            dpses.push({ name: "Reaper", IMG: '/assets/imgs/tall/reaper.png', score: this.reaper });
+            dpses.push({ name: "Reaper", IMG: 'assets/imgs/tall/reaper.png', score: this.reaper });
         }
         if (soldier76Switch) {
-            dpses.push({ name: "Soldier 76", IMG: '/assets/imgs/tall/soldier76.png', score: this.soldier76 });
+            dpses.push({ name: "Soldier 76", IMG: 'assets/imgs/tall/soldier76.png', score: this.soldier76 });
         }
         if (sombraSwitch) {
-            dpses.push({ name: "Sombra", IMG: '/assets/imgs/tall/sombra.png', score: this.sombra });
+            dpses.push({ name: "Sombra", IMG: 'assets/imgs/tall/sombra.png', score: this.sombra });
         }
         if (symmetraSwitch) {
-            dpses.push({ name: "Symmetra", IMG: '/assets/imgs/tall/symmetra.png', score: this.symmetra });
+            dpses.push({ name: "Symmetra", IMG: 'assets/imgs/tall/symmetra.png', score: this.symmetra });
         }
         if (torbjornSwitch) {
-            dpses.push({ name: "Torbjorn", IMG: '/assets/imgs/tall/torbjorn.png', score: this.torbjorn });
+            dpses.push({ name: "Torbjorn", IMG: 'assets/imgs/tall/torbjorn.png', score: this.torbjorn });
         }
         if (tracerSwitch) {
-            dpses.push({ name: "Tracer", IMG: '/assets/imgs/tall/tracer.png', score: this.tracer });
+            dpses.push({ name: "Tracer", IMG: 'assets/imgs/tall/tracer.png', score: this.tracer });
         }
         if (widowmakerSwitch) {
-            dpses.push({ name: "Widowmaker", IMG: '/assets/imgs/tall/widowmaker.png', score: this.widowmaker });
+            dpses.push({ name: "Widowmaker", IMG: 'assets/imgs/tall/widowmaker.png', score: this.widowmaker });
         }
         dpses.sort(function (a, b) { return b.score - a.score; });
         return dpses;
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\Mobile\OWVS\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      /Overwatch Versus/\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background-image: url(\'../assets/imgs/bg.jpg\'); background-position: center; background-repeat: no-repeat; background-size: cover;">\n	<!-- Welcome Card -->\n		<ion-card [hidden]="!step1">\n			<ion-card-header>\n				<h2>Welcome to Overwatch Versus!</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<button ion-button block (click)="stepUp();">BEGIN!</button>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Welcome Card END -->\n\n	<!-- Results Card -->\n		<ion-card [hidden]="!step3">\n			<ion-card-header>\n				<h2>You should play as..</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<ion-grid>\n					<ion-row>\n						<ion-col *ngFor="let hero of fin" style="border: 1px solid darkgray;">\n							<ion-row>\n								<img src={{hero.IMG}} style="width: 40px; height: 69px;">\n							</ion-row>\n							<ion-row>\n								<p style="text-align: center;">Score: {{hero.score}}</p>\n							</ion-row>\n						</ion-col>\n					</ion-row>\n				</ion-grid>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Results Card END -->\n\n	<ion-grid [hidden]="step1">\n		<ion-row>\n			<!-- Player Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="friendly">\n						<ion-card-header>\n							<h2>PLAYER</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-list>\n								<ion-item *ngFor="let player of tPro.friend" (click)="selecting(player.select);">\n									<img *ngIf="selected == player.select" src="../../assets/imgs/arrow.png" item-start>\n									<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n									{{player.name}}\n								</ion-item>\n							</ion-list>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Player Team END -->\n\n			<!-- Enemy Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="foe">\n						<ion-card-header>\n							<h2>ENEMY</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-item *ngFor="let player of tPro.foe" (click)="selecting(player.select);">\n								<img *ngIf="selected == player.select" src="../../assets/imgs/arrow.png" item-start>\n								<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n								{{player.name}}\n							</ion-item>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Enemy Team END -->\n		</ion-row>\n	</ion-grid>\n\n	<br>\n	<br>\n	<br>\n	<br>\n	<br>\n</ion-content>\n\n<ion-footer [hidden]="step1" style="background-color: white;">\n	<ion-toolbar>\n		<a *ngFor="let hero of hPro.heroes" (click)="picked(hero);">\n			<img src={{hero.IMG}} style="max-width: 30px;">\n		</a>\n	</ion-toolbar>\n</ion-footer>'/*ion-inline-end:"D:\Mobile\OWVS\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"D:\Mobile\OWVS\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      /Overwatch Versus/\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background-image: url(\'assets/imgs/bg.jpg\'); background-position: center; background-repeat: no-repeat; background-size: cover;">\n	<!-- Welcome Card -->\n		<ion-card [hidden]="!step1">\n			<ion-card-header>\n				<h2>Welcome to Overwatch Versus!</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<button ion-button block (click)="stepUp();">BEGIN!</button>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Welcome Card END -->\n\n	<!-- Results Card -->\n		<ion-card [hidden]="!step3">\n			<ion-card-header>\n				<h2>You should play as..</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<ion-grid>\n					<ion-row>\n						<ion-col *ngFor="let hero of fin" style="border: 1px solid darkgray;">\n							<ion-row>\n								<img src={{hero.IMG}} style="width: 40px; height: 69px;">\n							</ion-row>\n							<ion-row>\n								<p style="text-align: center;">Score: {{hero.score}}</p>\n							</ion-row>\n						</ion-col>\n					</ion-row>\n				</ion-grid>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Results Card END -->\n\n	<ion-grid [hidden]="step1">\n		<ion-row>\n			<!-- Player Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="friendly">\n						<ion-card-header>\n							<h2>PLAYER</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-list>\n								<ion-item *ngFor="let player of tPro.friend" (click)="selecting(player.select);">\n									<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n									<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n									{{player.name}}\n								</ion-item>\n							</ion-list>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Player Team END -->\n\n			<!-- Enemy Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="foe">\n						<ion-card-header>\n							<h2>ENEMY</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-item *ngFor="let player of tPro.foe" (click)="selecting(player.select);">\n								<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n								<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n								{{player.name}}\n							</ion-item>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Enemy Team END -->\n		</ion-row>\n	</ion-grid>\n\n	<br>\n	<br>\n	<br>\n	<br>\n	<br>\n</ion-content>\n\n<ion-footer [hidden]="step1" style="background-color: white;">\n	<ion-toolbar>\n		<a *ngFor="let hero of hPro.heroes" (click)="picked(hero);">\n			<img src={{hero.IMG}} style="max-width: 30px;">\n		</a>\n	</ion-toolbar>\n</ion-footer>'/*ion-inline-end:"D:\Mobile\OWVS\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_formula_formula__["a" /* FormulaProvider */],
@@ -934,36 +934,36 @@ var HeroProvider = /** @class */ (function () {
         this.http = http;
         this.heroes = [
             //Tanks
-            { name: "D.Va", role: "tank", meta: "2tank", dive: true, cc: false, IMG: '/assets/imgs/dva.png', code: "dva" },
-            { name: "Orisa", role: "tank", meta: "1tank", dive: false, cc: false, IMG: '/assets/imgs/orisa.png', code: "orisa" },
-            { name: "Reinhardt", role: "tank", meta: "1tank", dive: true, cc: true, IMG: '/assets/imgs/reinhardt.png', code: "reinhardt" },
-            { name: "Roadhog", role: "tank", meta: "2tank", dive: false, cc: true, IMG: '/assets/imgs/roadhog.png', code: "roadhog" },
-            { name: "Winston", role: "tank", meta: "1tank", dive: true, cc: false, IMG: '/assets/imgs/winston.png', code: "winston" },
-            { name: "Hammond", role: "tank", meta: "2tank", dive: true, cc: true, IMG: '/assets/imgs/hammond.png', code: "hammond" },
-            { name: "Zarya", role: "tank", meta: "2tank", dive: true, cc: true, IMG: '/assets/imgs/zarya.png', code: "zarya" },
+            { name: "D.Va", role: "tank", meta: "2tank", dive: true, cc: false, IMG: 'assets/imgs/dva.png', code: "dva" },
+            { name: "Orisa", role: "tank", meta: "1tank", dive: false, cc: false, IMG: 'assets/imgs/orisa.png', code: "orisa" },
+            { name: "Reinhardt", role: "tank", meta: "1tank", dive: true, cc: true, IMG: 'assets/imgs/reinhardt.png', code: "reinhardt" },
+            { name: "Roadhog", role: "tank", meta: "2tank", dive: false, cc: true, IMG: 'assets/imgs/roadhog.png', code: "roadhog" },
+            { name: "Winston", role: "tank", meta: "1tank", dive: true, cc: false, IMG: 'assets/imgs/winston.png', code: "winston" },
+            { name: "Hammond", role: "tank", meta: "2tank", dive: true, cc: true, IMG: 'assets/imgs/hammond.png', code: "hammond" },
+            { name: "Zarya", role: "tank", meta: "2tank", dive: true, cc: true, IMG: 'assets/imgs/zarya.png', code: "zarya" },
             //DPS
-            { name: "Bastion", role: "dps", meta: "front", dive: false, cc: false, IMG: '/assets/imgs/bastion.png', code: "bastion" },
-            { name: "Doomfist", role: "dps", meta: "flank", dive: true, cc: true, IMG: '/assets/imgs/doomfist.png', code: "doomfist" },
-            { name: "Genji", role: "dps", meta: "flank", dive: true, cc: false, IMG: '/assets/imgs/genji.png', code: "genji" },
-            { name: "Hanzo", role: "dps", meta: "front", dive: true, cc: false, IMG: '/assets/imgs/hanzo.png', code: "hanzo" },
-            { name: "Junkrat", role: "dps", meta: "back", dive: false, cc: false, IMG: '/assets/imgs/junkrat.png', code: "junkrat" },
-            { name: "McCree", role: "dps", meta: "front", dive: false, cc: true, IMG: '/assets/imgs/mccree.png', code: "mccree" },
-            { name: "Pharah", role: "dps", meta: "flank", dive: true, cc: false, IMG: '/assets/imgs/pharah.png', code: "pharah" },
-            { name: "Mei", role: "dps", meta: "front", dive: false, cc: true, IMG: '/assets/imgs/mei.png', code: "mei" },
-            { name: "Reaper", role: "dps", meta: "flank", dive: true, cc: false, IMG: '/assets/imgs/reaper.png', code: "reaper" },
-            { name: "Soldier 76", role: "dps", meta: "front", dive: false, cc: false, IMG: '/assets/imgs/soldier76.png', code: "soldier76" },
-            { name: "Sombra", role: "dps", meta: "flank", dive: true, cc: true, IMG: '/assets/imgs/sombra.png', code: "sombra" },
-            { name: "Symmetra", role: "dps", meta: "back", dive: false, cc: false, IMG: '/assets/imgs/symmetra.png', code: "symmetra" },
-            { name: "Torbjorn", role: "dps", meta: "back", dive: false, cc: false, IMG: '/assets/imgs/torbjorn.png', code: "torbjorn" },
-            { name: "Tracer", role: "dps", meta: "flank", dive: true, cc: false, IMG: '/assets/imgs/tracer.png', code: "tracer" },
-            { name: "Widowmaker", role: "dps", meta: "back", dive: false, cc: false, IMG: '/assets/imgs/widowmaker.png', code: "widowmaker" },
+            { name: "Bastion", role: "dps", meta: "front", dive: false, cc: false, IMG: 'assets/imgs/bastion.png', code: "bastion" },
+            { name: "Doomfist", role: "dps", meta: "flank", dive: true, cc: true, IMG: 'assets/imgs/doomfist.png', code: "doomfist" },
+            { name: "Genji", role: "dps", meta: "flank", dive: true, cc: false, IMG: 'assets/imgs/genji.png', code: "genji" },
+            { name: "Hanzo", role: "dps", meta: "front", dive: true, cc: false, IMG: 'assets/imgs/hanzo.png', code: "hanzo" },
+            { name: "Junkrat", role: "dps", meta: "back", dive: false, cc: false, IMG: 'assets/imgs/junkrat.png', code: "junkrat" },
+            { name: "McCree", role: "dps", meta: "front", dive: false, cc: true, IMG: 'assets/imgs/mccree.png', code: "mccree" },
+            { name: "Pharah", role: "dps", meta: "flank", dive: true, cc: false, IMG: 'assets/imgs/pharah.png', code: "pharah" },
+            { name: "Mei", role: "dps", meta: "front", dive: false, cc: true, IMG: 'assets/imgs/mei.png', code: "mei" },
+            { name: "Reaper", role: "dps", meta: "flank", dive: true, cc: false, IMG: 'assets/imgs/reaper.png', code: "reaper" },
+            { name: "Soldier 76", role: "dps", meta: "front", dive: false, cc: false, IMG: 'assets/imgs/soldier76.png', code: "soldier76" },
+            { name: "Sombra", role: "dps", meta: "flank", dive: true, cc: true, IMG: 'assets/imgs/sombra.png', code: "sombra" },
+            { name: "Symmetra", role: "dps", meta: "back", dive: false, cc: false, IMG: 'assets/imgs/symmetra.png', code: "symmetra" },
+            { name: "Torbjorn", role: "dps", meta: "back", dive: false, cc: false, IMG: 'assets/imgs/torbjorn.png', code: "torbjorn" },
+            { name: "Tracer", role: "dps", meta: "flank", dive: true, cc: false, IMG: 'assets/imgs/tracer.png', code: "tracer" },
+            { name: "Widowmaker", role: "dps", meta: "back", dive: false, cc: false, IMG: 'assets/imgs/widowmaker.png', code: "widowmaker" },
             //Supports
-            { name: "Ana", role: "support", meta: "1heal", dive: false, cc: true, IMG: '/assets/imgs/ana.png', code: "ana" },
-            { name: "Brigitte", role: "support", meta: "2heal", dive: false, cc: true, IMG: '/assets/imgs/brigitte.png', code: "brigitte" },
-            { name: "Lucio", role: "support", meta: "2heal", dive: true, cc: false, IMG: '/assets/imgs/lucio.png', code: "lucio" },
-            { name: "Mercy", role: "support", meta: "1heal", dive: true, cc: false, IMG: '/assets/imgs/mercy.png', code: "mercy" },
-            { name: "Moira", role: "support", meta: "1heal", dive: false, cc: false, IMG: '/assets/imgs/moira.png', code: "moira" },
-            { name: "Zenyatta", role: "support", meta: "2heal", dive: false, cc: false, IMG: '/assets/imgs/zenyatta.png', code: "zenyatta" }
+            { name: "Ana", role: "support", meta: "1heal", dive: false, cc: true, IMG: 'assets/imgs/ana.png', code: "ana" },
+            { name: "Brigitte", role: "support", meta: "2heal", dive: false, cc: true, IMG: 'assets/imgs/brigitte.png', code: "brigitte" },
+            { name: "Lucio", role: "support", meta: "2heal", dive: true, cc: false, IMG: 'assets/imgs/lucio.png', code: "lucio" },
+            { name: "Mercy", role: "support", meta: "1heal", dive: true, cc: false, IMG: 'assets/imgs/mercy.png', code: "mercy" },
+            { name: "Moira", role: "support", meta: "1heal", dive: false, cc: false, IMG: 'assets/imgs/moira.png', code: "moira" },
+            { name: "Zenyatta", role: "support", meta: "2heal", dive: false, cc: false, IMG: 'assets/imgs/zenyatta.png', code: "zenyatta" }
         ];
         console.log('Hello HeroProvider Provider');
     }
@@ -1046,19 +1046,19 @@ var TeamProvider = /** @class */ (function () {
     function TeamProvider(http) {
         this.http = http;
         this.friend = [
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "a0", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "a1", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "a2", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "a3", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "a4", role: "none" }
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a0", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a1", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a2", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a3", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a4", role: "none" }
         ];
         this.foe = [
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b0", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b1", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b2", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b3", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b4", role: "none" },
-            { name: "Blank", IMG: '/assets/imgs/blank.png', select: "b5", role: "none" }
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b0", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b1", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b2", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b3", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b4", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b5", role: "none" }
         ];
         console.log('Hello TeamProvider Provider');
     }
