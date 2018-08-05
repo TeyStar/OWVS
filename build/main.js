@@ -70,6 +70,7 @@ var HomePage = /** @class */ (function () {
         this.step1 = true;
         this.step2 = false;
         this.step3 = false;
+        this.step4 = this.fPro.hvar();
         this.selected = "Hello";
         this.dva = 0;
         this.hammond = 0;
@@ -99,6 +100,8 @@ var HomePage = /** @class */ (function () {
         this.genji = 0;
         this.reaper = 0;
         this.reinhardt = 0;
+        this.jpc = 0;
+        this.hvar = 0;
         this.fin = [];
     }
     HomePage.prototype.nextStep = function () {
@@ -230,6 +233,8 @@ var HomePage = /** @class */ (function () {
             this.genji = 0;
             this.reaper = 0;
             this.reinhardt = 0;
+            this.jpc = 0;
+            this.hvar = 0;
             this.formulateTeams();
         }
     };
@@ -323,6 +328,7 @@ var HomePage = /** @class */ (function () {
                     this.orisa++;
                     this.brigitte++;
                     this.dva++;
+                    this.hvar++;
                     break;
                 case "McCree":
                     this.genji++;
@@ -420,6 +426,9 @@ var HomePage = /** @class */ (function () {
                     this.winston++;
                     this.tracer++;
                     break;
+                case "Widowmaker":
+                    this.hvar++;
+                    break;
             }
         }
         for (var i = 0; i < this.tPro.foe.length; i++) {
@@ -445,6 +454,7 @@ var HomePage = /** @class */ (function () {
                     this.dva++;
                     this.torbjorn++;
                     this.brigitte++;
+                    this.hvar++;
                     break;
                 case "Moira":
                     this.hanzo++;
@@ -540,6 +550,7 @@ var HomePage = /** @class */ (function () {
                     this.soldier76++;
                     this.widowmaker++;
                     this.zarya++;
+                    this.hvar++;
                     break;
                 case "Widowmaker":
                     this.dva++;
@@ -596,6 +607,13 @@ var HomePage = /** @class */ (function () {
                     break;
             }
         }
+        if (this.hvar >= 5 && this.step4) {
+            var j = Math.random();
+            if (j > 0.89) {
+                this.jpc = 6;
+            }
+            this.hvar = 0;
+        }
         this.formulateRoles();
     };
     HomePage.prototype.formulateTank = function (c, m) {
@@ -634,37 +652,40 @@ var HomePage = /** @class */ (function () {
         }
         if (m) {
             if (dvaSwitch) {
-                tanks.push({ name: "D.Va", IMG: 'assets/imgs/tall/dva.png', score: this.dva });
+                tanks.push({ name: "D.Va", IMG: 'assets/imgs/tall/dva.png', score: this.dva + 3 });
             }
             if (hammondSwitch) {
-                tanks.push({ name: "Hammond", IMG: 'assets/imgs/tall/hammond.png', score: this.hammond });
+                tanks.push({ name: "Hammond", IMG: 'assets/imgs/tall/hammond.png', score: this.hammond + 3 });
             }
             if (winstonSwitch) {
-                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston });
+                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston + 3 });
             }
             if (orisaSwitch) {
-                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa });
+                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa + 3 });
             }
             if (zaryaSwitch) {
-                tanks.push({ name: "Zarya", IMG: 'assets/imgs/tall/zarya.png', score: this.zarya });
+                tanks.push({ name: "Zarya", IMG: 'assets/imgs/tall/zarya.png', score: this.zarya + 3 });
             }
             if (reinhardtSwitch) {
-                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt });
+                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt + 3 });
             }
             if (roadhogSwitch) {
-                tanks.push({ name: "Roadhog", IMG: 'assets/imgs/tall/roadhog.png', score: this.roadhog });
+                tanks.push({ name: "Roadhog", IMG: 'assets/imgs/tall/roadhog.png', score: this.roadhog + 3 });
             }
         }
         else if (!m) {
             if (winstonSwitch) {
-                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston });
+                tanks.push({ name: "Winston", IMG: 'assets/imgs/tall/winston.png', score: this.winston + 3 });
             }
             if (orisaSwitch) {
-                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa });
+                tanks.push({ name: "Orisa", IMG: 'assets/imgs/tall/orisa.png', score: this.orisa + 3 });
             }
             if (reinhardtSwitch) {
-                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt });
+                tanks.push({ name: "Reinhardt", IMG: 'assets/imgs/tall/reinhardt.png', score: this.reinhardt + 3 });
             }
+        }
+        if (this.jpc) {
+            tanks.push({ IMG: 'assets/imgs/tall/jetpackcat.png', score: this.jpc });
         }
         tanks.sort(function (a, b) { return b.score - a.score; });
         return tanks;
@@ -701,34 +722,37 @@ var HomePage = /** @class */ (function () {
         }
         if (m) {
             if (anaSwitch) {
-                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana });
+                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana + 3 });
             }
             if (brigitteSwitch) {
-                supports.push({ name: "Brigitte", IMG: 'assets/imgs/tall/brigitte.png', score: this.brigitte });
+                supports.push({ name: "Brigitte", IMG: 'assets/imgs/tall/brigitte.png', score: this.brigitte + 3 });
             }
             if (lucioSwitch) {
-                supports.push({ name: "Lucio", IMG: 'assets/imgs/tall/lucio.png', score: this.lucio });
+                supports.push({ name: "Lucio", IMG: 'assets/imgs/tall/lucio.png', score: this.lucio + 3 });
             }
             if (mercySwitch) {
-                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy });
+                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy + 3 });
             }
             if (moiraSwitch) {
-                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira });
+                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira + 3 });
             }
             if (zenyattaSwitch) {
-                supports.push({ name: "Zenyatta", IMG: 'assets/imgs/tall/zenyatta.png', score: this.zenyatta });
+                supports.push({ name: "Zenyatta", IMG: 'assets/imgs/tall/zenyatta.png', score: this.zenyatta + 3 });
             }
         }
         else if (!m) {
             if (anaSwitch) {
-                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana });
+                supports.push({ name: "Ana", IMG: 'assets/imgs/tall/ana.png', score: this.ana + 3 });
             }
             if (mercySwitch) {
-                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy });
+                supports.push({ name: "Mercy", IMG: 'assets/imgs/tall/mercy.png', score: this.mercy + 3 });
             }
             if (moiraSwitch) {
-                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira });
+                supports.push({ name: "Moira", IMG: 'assets/imgs/tall/moira.png', score: this.moira + 3 });
             }
+        }
+        if (this.jpc) {
+            supports.push({ IMG: 'assets/imgs/tall/jetpackcat.png', score: this.jpc });
         }
         supports.sort(function (a, b) { return b.score - a.score; });
         return supports;
@@ -800,56 +824,59 @@ var HomePage = /** @class */ (function () {
             }
         }
         if (bastionSwitch) {
-            dpses.push({ name: "Bastion", IMG: 'assets/imgs/tall/bastion.png', score: this.bastion });
+            dpses.push({ name: "Bastion", IMG: 'assets/imgs/tall/bastion.png', score: this.bastion + 3 });
         }
         if (doomfistSwitch) {
-            dpses.push({ name: "Doomfist", IMG: 'assets/imgs/tall/doomfist.png', score: this.doomfist });
+            dpses.push({ name: "Doomfist", IMG: 'assets/imgs/tall/doomfist.png', score: this.doomfist + 3 });
         }
         if (genjiSwitch) {
-            dpses.push({ name: "Genji", IMG: 'assets/imgs/tall/genji.png', score: this.genji });
+            dpses.push({ name: "Genji", IMG: 'assets/imgs/tall/genji.png', score: this.genji + 3 });
         }
         if (hanzoSwitch) {
-            dpses.push({ name: "Hanzo", IMG: 'assets/imgs/tall/hanzo.png', score: this.hanzo });
+            dpses.push({ name: "Hanzo", IMG: 'assets/imgs/tall/hanzo.png', score: this.hanzo + 3 });
         }
         if (junkratSwitch) {
-            dpses.push({ name: "Junkrat", IMG: 'assets/imgs/tall/junkrat.png', score: this.junkrat });
+            dpses.push({ name: "Junkrat", IMG: 'assets/imgs/tall/junkrat.png', score: this.junkrat + 3 });
         }
         if (mccreeSwitch) {
-            dpses.push({ name: "McCree", IMG: 'assets/imgs/tall/mccree.png', score: this.mccree });
+            dpses.push({ name: "McCree", IMG: 'assets/imgs/tall/mccree.png', score: this.mccree + 3 });
         }
         if (meiSwitch) {
-            dpses.push({ name: "Mei", IMG: 'assets/imgs/tall/mei.png', score: this.mei });
+            dpses.push({ name: "Mei", IMG: 'assets/imgs/tall/mei.png', score: this.mei + 3 });
         }
         if (pharahSwitch) {
-            dpses.push({ name: "Pharah", IMG: 'assets/imgs/tall/pharah.png', score: this.pharah });
+            dpses.push({ name: "Pharah", IMG: 'assets/imgs/tall/pharah.png', score: this.pharah + 3 });
         }
         if (reaperSwitch) {
-            dpses.push({ name: "Reaper", IMG: 'assets/imgs/tall/reaper.png', score: this.reaper });
+            dpses.push({ name: "Reaper", IMG: 'assets/imgs/tall/reaper.png', score: this.reaper + 3 });
         }
         if (soldier76Switch) {
-            dpses.push({ name: "Soldier 76", IMG: 'assets/imgs/tall/soldier76.png', score: this.soldier76 });
+            dpses.push({ name: "Soldier 76", IMG: 'assets/imgs/tall/soldier76.png', score: this.soldier76 + 3 });
         }
         if (sombraSwitch) {
-            dpses.push({ name: "Sombra", IMG: 'assets/imgs/tall/sombra.png', score: this.sombra });
+            dpses.push({ name: "Sombra", IMG: 'assets/imgs/tall/sombra.png', score: this.sombra + 3 });
         }
         if (symmetraSwitch) {
-            dpses.push({ name: "Symmetra", IMG: 'assets/imgs/tall/symmetra.png', score: this.symmetra });
+            dpses.push({ name: "Symmetra", IMG: 'assets/imgs/tall/symmetra.png', score: this.symmetra + 3 });
         }
         if (torbjornSwitch) {
-            dpses.push({ name: "Torbjorn", IMG: 'assets/imgs/tall/torbjorn.png', score: this.torbjorn });
+            dpses.push({ name: "Torbjorn", IMG: 'assets/imgs/tall/torbjorn.png', score: this.torbjorn + 3 });
         }
         if (tracerSwitch) {
-            dpses.push({ name: "Tracer", IMG: 'assets/imgs/tall/tracer.png', score: this.tracer });
+            dpses.push({ name: "Tracer", IMG: 'assets/imgs/tall/tracer.png', score: this.tracer + 3 });
         }
         if (widowmakerSwitch) {
-            dpses.push({ name: "Widowmaker", IMG: 'assets/imgs/tall/widowmaker.png', score: this.widowmaker });
+            dpses.push({ name: "Widowmaker", IMG: 'assets/imgs/tall/widowmaker.png', score: this.widowmaker + 3 });
+        }
+        if (this.jpc) {
+            dpses.push({ IMG: 'assets/imgs/tall/jetpackcat.png', score: this.jpc });
         }
         dpses.sort(function (a, b) { return b.score - a.score; });
         return dpses;
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\Mobile\OWVS\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      /Overwatch Versus/\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background-image: url(\'assets/imgs/bg.jpg\'); background-position: center; background-repeat: no-repeat; background-size: cover;">\n	<!-- Welcome Card -->\n		<ion-card [hidden]="!step1">\n			<ion-card-header>\n				<h2>Welcome to Overwatch Versus!</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<button ion-button block (click)="stepUp();">BEGIN!</button>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Welcome Card END -->\n\n	<!-- Results Card -->\n		<ion-card [hidden]="!step3">\n			<ion-card-header>\n				<h2>You should play as..</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<ion-grid>\n					<ion-row>\n						<ion-col *ngFor="let hero of fin" style="border: 1px solid darkgray;">\n							<ion-row>\n								<img src={{hero.IMG}} style="width: 40px; height: 69px;">\n							</ion-row>\n							<ion-row>\n								<p style="text-align: center;">Score: {{hero.score}}</p>\n							</ion-row>\n						</ion-col>\n					</ion-row>\n				</ion-grid>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Results Card END -->\n\n	<ion-grid [hidden]="step1">\n		<ion-row>\n			<!-- Player Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="friendly">\n						<ion-card-header>\n							<h2>PLAYER</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-list>\n								<ion-item *ngFor="let player of tPro.friend" (click)="selecting(player.select);">\n									<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n									<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n									{{player.name}}\n								</ion-item>\n							</ion-list>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Player Team END -->\n\n			<!-- Enemy Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="foe">\n						<ion-card-header>\n							<h2>ENEMY</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-item *ngFor="let player of tPro.foe" (click)="selecting(player.select);">\n								<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n								<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n								{{player.name}}\n							</ion-item>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Enemy Team END -->\n		</ion-row>\n	</ion-grid>\n\n	<br>\n	<br>\n	<br>\n	<br>\n	<br>\n</ion-content>\n\n<ion-footer [hidden]="step1" style="background-color: white;">\n	<ion-toolbar>\n		<a *ngFor="let hero of hPro.heroes" (click)="picked(hero);">\n			<img src={{hero.IMG}} style="max-width: 30px;">\n		</a>\n	</ion-toolbar>\n</ion-footer>'/*ion-inline-end:"D:\Mobile\OWVS\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"D:\Mobile\OWVS\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      /Overwatch Versus/\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background-image: url(\'assets/imgs/bg.jpg\'); background-position: center; background-repeat: no-repeat; background-size: cover;">\n	<!-- Welcome Card -->\n		<ion-card [hidden]="!step1">\n			<ion-card-header>\n				<h2>Welcome to Overwatch Versus!</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<p>This app will give you hero suggestions based off of both your team\'s compostion, as well as the enemy\'s team!</p>\n				<a>Tap on any teammate or enemy slot you would like to switch heroes, then at the bottom of the screen tap the hero you would like to replace them with!</a>\n				<p>Once all team slots are full, you will be given up to 4 suggestions!</p>\n				<a>PLEASE REMEMBER that this app prioritizes the 2-2-2 meta!  Results will always demand you to fill the last position that was not chosen by your teammates.</a>\n				<button ion-button block (click)="stepUp();">BEGIN!</button>\n			</ion-card-content>\n			<i style="color: gray;">*This app is for mobile devices but still functions for computers, it will just look uglier!</i>\n		</ion-card>\n	<!-- END Welcome Card END -->\n\n	<!-- Results Card -->\n		<ion-card [hidden]="!step3">\n			<ion-card-header>\n				<h2>You should play as..</h2>\n			</ion-card-header>\n			<ion-card-content>\n				<ion-grid>\n					<ion-row>\n						<ion-col *ngFor="let hero of fin" style="border: 1px solid darkgray;">\n							<ion-row>\n								<img src={{hero.IMG}} style="width: 40px; height: 69px;">\n							</ion-row>\n							<ion-row>\n								<p style="text-align: center;">Score: {{hero.score}}</p>\n							</ion-row>\n						</ion-col>\n					</ion-row>\n				</ion-grid>\n			</ion-card-content>\n		</ion-card>\n	<!-- END Results Card END -->\n\n	<ion-grid [hidden]="step1">\n		<ion-row>\n			<!-- Player Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="friendly">\n						<ion-card-header>\n							<h2>PLAYER</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-list>\n								<ion-item *ngFor="let player of tPro.friend" (click)="selecting(player.select);">\n									<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n									<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n									{{player.name}}\n								</ion-item>\n								<ion-item>\n									<img src="assets/imgs/rikimaru.png" item-start>\n									You!\n								</ion-item>\n							</ion-list>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Player Team END -->\n\n			<!-- Enemy Team -->\n				<ion-col col-6 style="padding: 0px; margin: 0px;">\n					<ion-card class="foe">\n						<ion-card-header>\n							<h2>ENEMY</h2>\n							<h2>TEAM</h2>\n						</ion-card-header>\n						<ion-card-content style="padding: 0px; margin: 0px;">\n							<ion-item *ngFor="let player of tPro.foe" (click)="selecting(player.select);">\n								<img *ngIf="selected == player.select" src="assets/imgs/arrow.png" item-start>\n								<img *ngIf="selected != player.select" src={{player.IMG}} item-start>\n								{{player.name}}\n							</ion-item>\n						</ion-card-content>\n					</ion-card>\n				</ion-col>\n			<!-- END Enemy Team END -->\n		</ion-row>\n	</ion-grid>\n\n	<br>\n	<br>\n	<br>\n	<br>\n	<br>\n</ion-content>\n\n<ion-footer [hidden]="step1" style="background-color: white;">\n	<ion-toolbar>\n		<a *ngFor="let hero of hPro.heroes" (click)="picked(hero);">\n			<img src={{hero.IMG}} style="max-width: 30px;">\n		</a>\n	</ion-toolbar>\n</ion-footer>'/*ion-inline-end:"D:\Mobile\OWVS\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_formula_formula__["a" /* FormulaProvider */],
@@ -892,8 +919,17 @@ var FormulaProvider = /** @class */ (function () {
     function FormulaProvider(http) {
         this.http = http;
         this.results = [];
+        this.construction = Math.random();
         console.log('Hello FormulaProvider Provider');
     }
+    FormulaProvider.prototype.hvar = function () {
+        if (this.construction > 0.49) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
     FormulaProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
@@ -1046,19 +1082,19 @@ var TeamProvider = /** @class */ (function () {
     function TeamProvider(http) {
         this.http = http;
         this.friend = [
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a0", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a1", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a2", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a3", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "a4", role: "none" }
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "a0", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "a1", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "a2", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "a3", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "a4", role: "none" }
         ];
         this.foe = [
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b0", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b1", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b2", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b3", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b4", role: "none" },
-            { name: "Blank", IMG: 'assets/imgs/blank.png', select: "b5", role: "none" }
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b0", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b1", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b2", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b3", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b4", role: "none" },
+            { name: "Blank", IMG: 'assets/imgs/pachimari.png', select: "b5", role: "none" }
         ];
         console.log('Hello TeamProvider Provider');
     }
